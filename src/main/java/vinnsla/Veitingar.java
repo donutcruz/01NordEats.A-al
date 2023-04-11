@@ -6,9 +6,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
- *
  *  Lýsing  : Vinnsluklasi fyrir veitingar. Hefur heiti og verð.
  *
  *

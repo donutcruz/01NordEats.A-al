@@ -10,8 +10,6 @@ import javafx.scene.control.TextInputDialog;
 import java.io.IOException;
 
 /******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
  *
  *  Lýsing  : Gluggi fyrir innskráningu
  *

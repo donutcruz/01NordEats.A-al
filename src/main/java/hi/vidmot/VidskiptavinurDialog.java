@@ -9,9 +9,6 @@ import javafx.scene.control.*;
 import java.io.IOException;
 
 /******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
- *
  *  Lýsing  : Dialogur til að skrá viðskiptavin
  *
  *

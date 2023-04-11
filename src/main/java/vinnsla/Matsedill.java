@@ -4,9 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 /******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
- *
  *  Lýsing  : Vinnsluklasi fyrir matseðil. Hefur lista af veitingum
  *
  *

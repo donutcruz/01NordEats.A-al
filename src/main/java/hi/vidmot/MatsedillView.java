@@ -8,9 +8,6 @@ import javafx.scene.control.ListView;
 import java.io.IOException;
 
 /******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
- *
  *  Lýsing  : Viðmótshlutur fyrir matseðil af veitingum
  *
  *

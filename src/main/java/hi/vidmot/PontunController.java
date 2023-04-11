@@ -13,8 +13,6 @@ import javafx.scene.control.TextInputDialog;
 import java.util.Optional;
 
 /******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
  *
  *  Lýsing  : Controller fyrir pöntunarsenuna
  *

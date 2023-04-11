@@ -1,8 +1,6 @@
 package hi.vidmot;
 
-/**
- * @author Almas Baimagambetov (almaslvl@gmail.com)
- */
+
 public enum View {
     PONTUN("pontun-view.fxml"),
     INNSKRA("innskra-view.fxml"),

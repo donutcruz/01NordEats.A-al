@@ -5,9 +5,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.ListChangeListener;
 
 /******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
- *
+
  *  Lýsing  : Vinnsluklasi fyrir körfu. Karfa er eins konar matseðill en
  *  hefur heildarverð
  *
