@@ -4,14 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-/******************************************************************************
- *  Nafn    : Ebba Þóra Hvannberg
- *  T-póstur: ebba@hi.is
- *
- *  Lýsing  : 
- *
- *
- *****************************************************************************/
+
 public class GreidslaController  {
 
     public Label fxVidskiptavinur;
