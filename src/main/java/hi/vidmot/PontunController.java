@@ -53,7 +53,7 @@ public class PontunController {
     }
 
 
-    /**
+    /**s
      * Setja valdar veitingar í körfu  ef eitthvað er valið
      *
      * @param actionEvent
