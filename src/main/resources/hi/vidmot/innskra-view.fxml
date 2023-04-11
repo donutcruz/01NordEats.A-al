@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.InnskraView">
+<AnchorPane prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.InnskraView">
    <children>
-      <Button fx:id="fxInnskra" layoutX="273.0" layoutY="175.0" mnemonicParsing="false" onAction="#fxInnskraHandler" text="Innskra" />
+      <Button fx:id="fxInnskra" layoutX="216.0" layoutY="225.0" mnemonicParsing="false" onAction="#fxInnskraHandler" prefHeight="26.0" prefWidth="110.0" text="Innskra" />
+      <ImageView fitHeight="116.0" fitWidth="150.0" layoutX="212.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../java/img/nordlogo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
