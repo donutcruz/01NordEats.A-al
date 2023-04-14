@@ -11,7 +11,7 @@
    </center>
    <top>
       <AnchorPane BorderPane.alignment="CENTER">
-         <Label layoutX="-42.0" prefHeight="33.0" prefWidth="273.0" text="TakeAway Ebbu " AnchorPane.leftAnchor="-42.0" />
+         <Label layoutX="-42.0" prefHeight="33.0" prefWidth="273.0" text="NördEats" AnchorPane.leftAnchor="20" />
          <Button fx:id="fxInnskraning" layoutX="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="33.0" prefWidth="166.0" text="Innskráning" AnchorPane.leftAnchor="360.0" AnchorPane.rightAnchor="5.0" />
       </AnchorPane>
    </top>

@@ -44,4 +44,8 @@ public class InnskraView {
         Optional<Vidskiptavinur> v = new VidskiptavinurDialog(vidskiptavinur).showAndWait();
         v.ifPresent(value -> fxInnskra.setText(value.getNafn()));
     }
+
+    public Vidskiptavinur getVidskiptavinur() {
+        return vidskiptavinur;
+    }
 }

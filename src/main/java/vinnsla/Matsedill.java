@@ -19,6 +19,7 @@ public class Matsedill {
     public void setjaGogn () {
         veitingar.add (new Veitingar ("Margarita Pizza", 2999));
         veitingar.add (new Veitingar ("Brauðstangir", 1999));
+        veitingar.add (new Veitingar ("Brauðstangasósa", 299));
     }
     public ObservableList<Veitingar> getVeitingar() {
         return veitingar;
