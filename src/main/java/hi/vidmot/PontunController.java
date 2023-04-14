@@ -1,5 +1,6 @@
 package hi.vidmot;
 
+import javafx.fxml.FXMLLoader;
 import vinnsla.Karfa;
 import vinnsla.Veitingar;
 import vinnsla.Vidskiptavinur;
@@ -10,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextInputDialog;
 
+import java.io.IOException;
 import java.util.Optional;
 
 /******************************************************************************
@@ -34,9 +36,12 @@ public class PontunController {
     private final Karfa karfa = new Karfa();
     private Vidskiptavinur vidskiptavinur = null;
 
-    public void initialize() {
+    public void initialize() throws IOException {
         fxKarfa.setItems(karfa.getVeitingar()); // tengja viðmót og vinnslu
         fxSamtals.textProperty().bind(karfa.heildarVerdProperty().asString()); // bindum saman körfu
+        InnskraView inn = (InnskraView) ViewSwitcher.lookup(View.INNSKRA);
+        vidskiptavinur = inn.getVidskiptavinur();
+        fxInnskraning.setText(vidskiptavinur.getNafn());
     }
 
 
