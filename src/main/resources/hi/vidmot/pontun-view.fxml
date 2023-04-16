@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
+<?import hi.vidmot.MatsedillView?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<?import hi.vidmot.MatsedillView?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.PontunController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="426.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.PontunController">
    <center>
      <MatsedillView fx:id="fxMatsedill" />
    </center>
    <top>
-      <AnchorPane BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="82.0" prefWidth="578.0" BorderPane.alignment="CENTER">
          <Label layoutX="-42.0" prefHeight="33.0" prefWidth="273.0" text="NördEats" AnchorPane.leftAnchor="20" />
-         <Button fx:id="fxInnskraning" layoutX="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="33.0" prefWidth="166.0" text="Innskráning" AnchorPane.leftAnchor="360.0" AnchorPane.rightAnchor="5.0" />
+         <Button fx:id="fxInnskraning" layoutX="413.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fxInnskraningHandler" prefHeight="22.0" prefWidth="172.0" text="Innskráning" AnchorPane.leftAnchor="413.0" AnchorPane.rightAnchor="-1.0" />
+         <Button fx:id="fxStillingar" layoutX="413.0" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fxStillingarHandler" prefHeight="22.0" prefWidth="171.0" text="Stillingar" />
       </AnchorPane>
    </top>
    <bottom>
