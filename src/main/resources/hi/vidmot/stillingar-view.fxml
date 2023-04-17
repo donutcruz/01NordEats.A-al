@@ -3,12 +3,19 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="hi.vidmot.StillingarController">
-    <Label text="Notanda Stillingar" />
-    <TextField fx:id="fxNafn" promptText="Name" text="Nafn" />
-    <TextField fx:id="fxHeimilisfang" promptText="Address" text="Heimilisfang" />
-    <TextField fx:id="fxGreidslaInfo" promptText="Payment Information" text="Greiðslumáta" />
-    <Button onAction="#saveSettings" text="Save" />
-</VBox>
+
+<AnchorPane prefHeight="389.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.StillingarController">
+   <children>
+      <VBox layoutX="14.0" layoutY="169.0" prefHeight="206.0" prefWidth="152.0">
+          <Label text="Notanda Stillingar" VBox.vgrow="NEVER" />
+          <TextField fx:id="fxNafn" promptText="Name" text="Nafn" VBox.vgrow="NEVER" />
+          <TextField fx:id="fxHeimilisfang" promptText="Address" text="Heimilisfang" />
+          <TextField fx:id="fxGreidslaInfo" promptText="Payment Information" text="Greiðslumáta" />
+          <Button fx:id="fxVistaStillingar" onAction="#fxVistaStillingarhandler" prefHeight="34.0" prefWidth="91.0" text="Vista" />
+         <Button fx:id="fxTilbaka" layoutX="10.0" layoutY="102.0" onAction="#fxTilbakaHandler" prefHeight="34.0" prefWidth="91.0" text="Tilbaka" />
+      </VBox>
+   </children>
+</AnchorPane>
