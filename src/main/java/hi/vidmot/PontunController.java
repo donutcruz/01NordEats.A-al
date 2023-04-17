@@ -2,15 +2,10 @@ package hi.vidmot;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextInputDialog;
-import javafx.stage.Stage;
 import vinnsla.Karfa;
 import vinnsla.Veitingar;
 import vinnsla.Vidskiptavinur;
@@ -127,23 +122,7 @@ public class PontunController {
     }
 
     public void fxStillingarHandler(ActionEvent actionEvent) {
-        try {
-            // Load the FXML file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("stillingar-view.fxml"));
-            Parent root = loader.load();
-
-            // Create a new scene with the loaded FXML file
-            Scene scene = new Scene(root);
-
-            // Get the stage from the button's action event
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-            // Set the new scene on the stage
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
+        ViewSwitcher.switchTo(View.STILLINGAR);
         }
-    }
 
-}
+    }
