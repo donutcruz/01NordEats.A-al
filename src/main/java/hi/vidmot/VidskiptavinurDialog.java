@@ -1,12 +1,13 @@
 package hi.vidmot;
 
-import vinnsla.Vidskiptavinur;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import vinnsla.Vidskiptavinur;
 
 import java.io.IOException;
+import java.util.Optional;
 
 /******************************************************************************
  *  Lýsing  : Dialogur til að skrá viðskiptavin
@@ -36,6 +37,14 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
         setResultConverter();
         // sett regla um hvenær í lagi hnappur er virkur
         iLagiRegla();
+    }
+    public void BreytaStillingVidskiptavinur() {
+        Optional<Vidskiptavinur> result = showAndWait();
+        if (result.isPresent()) {
+            // Update the Vidskiptavinur object with the new values
+            vidskiptavinur.setNafn(fxNafn.getText());
+            vidskiptavinur.setHeimilisfang(fxHeimilisfang.getText());
+        }
     }
 
 

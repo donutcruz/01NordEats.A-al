@@ -48,7 +48,7 @@
       <HBox>
          <VBox prefHeight="100.0" prefWidth="202.0">
             <Label fx:id="fxVidskiptavinur" prefHeight="25.0" prefWidth="80.0"/>
-            <Label fx:id="fxHeimilisfang" prefHeight="25.0" prefWidth="80.0"/>
+            <Label fx:id="fxHeimilisfangLabel" prefHeight="25.0" prefWidth="80.0"/>
             <Label fx:id="fxGreidslaInfo" prefHeight="25.0" prefWidth="80.0"/>
          </VBox>
       </HBox>
