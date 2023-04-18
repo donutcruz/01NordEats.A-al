@@ -36,6 +36,8 @@ public class ViewSwitcher {
             if (cache.containsKey(view)) {
                 System.out.println("Loading from cache: " + view.name());
                 root = cache.get(view);
+                // display the contents of the cache
+                System.out.println("Cache contents: " + cache);
             } else {
                 System.out.println("Loading from FXML: " + view.getFileName());
                 loader = new FXMLLoader(ViewSwitcher.class.getResource(view.getFileName()));

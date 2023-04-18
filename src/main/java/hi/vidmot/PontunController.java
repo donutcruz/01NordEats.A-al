@@ -2,6 +2,7 @@ package hi.vidmot;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -10,6 +11,7 @@ import vinnsla.Karfa;
 import vinnsla.Veitingar;
 import vinnsla.Vidskiptavinur;
 
+import javax.swing.tree.DefaultTreeModel;
 import java.io.IOException;
 import java.util.Optional;
 
@@ -35,6 +37,7 @@ public class PontunController {
     // Vinnsluhlutir
     private final Karfa karfa = new Karfa();
     private Vidskiptavinur vidskiptavinur = null;
+    private DefaultTreeModel scene;
 
     public void initialize() throws IOException {
         fxKarfa.setItems(karfa.getVeitingar()); // tengja viðmót og vinnslu
@@ -129,10 +132,10 @@ public class PontunController {
 
     public void fxStillingarHandler(ActionEvent actionEvent) {
         System.out.println("Stillingar button clicked");
-        {
-            System.out.println("Switching to stillingar-view.fxml");
-            ViewSwitcher.switchTo(View.STILLINGAR);
-        }
-
+        // switch to the Stillingar scene and print out what scene you are switching to
+        System.out.println("Switching to stillingar-view.fxml");
+        ViewSwitcher.switchTo(View.STILLINGAR);
+        // get the root of the Stillingar scene from the cache
+        Parent stillingarRoot = ViewSwitcher.lookupRoot(View.STILLINGAR);
     }
 }
