@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -21,9 +22,9 @@ public class StillingarController {
 
     @FXML
     public Label fxGreidslaInfo;
+    public Button fxVistaStillingar;
+    public Button fxBreytaStillingar;
 
-    /* Skoða þetta aðeins betur, þarf að kóða betur
-     */
     public void initialize() {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         fxVidskiptavinur.textProperty().bind(pontunController.getVidskiptavinur().nafnProperty());
