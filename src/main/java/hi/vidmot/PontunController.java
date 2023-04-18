@@ -59,7 +59,8 @@ public class PontunController {
     }
 
 
-    /**s
+    /**
+     * s
      * Setja valdar veitingar í körfu  ef eitthvað er valið
      *
      * @param actionEvent
@@ -82,6 +83,7 @@ public class PontunController {
     /**
      * Ef enginn viðskiptavinur er til þá er skráður nýr viðskiptavinur. Annars er hægt
      * að skrá sig inn
+     *
      * @param actionEvent
      */
     public void fxInnskraningHandler(ActionEvent actionEvent) {
@@ -95,16 +97,17 @@ public class PontunController {
     /**
      * Innskrá viðskiptavin
      */
-    private  void skraInn() {
+    private void skraInn() {
         LoginDialog login = new LoginDialog();
         TextInputDialog t = login.upphafsstilla();
         Optional<String> o = t.showAndWait();
-        o.ifPresent((value)-> {fxInnskraning.setText("innskráð(ur) "+vidskiptavinur.getNafn());});
+        o.ifPresent((value) -> {
+            fxInnskraning.setText("innskráð(ur) " + vidskiptavinur.getNafn());
+        });
     }
 
     /**
      * Skrá nýjan viðskiptavin
-     *
      */
     private void nyrVidskiptavinur() {
         vidskiptavinur = new Vidskiptavinur("", "");
@@ -125,7 +128,11 @@ public class PontunController {
     }
 
     public void fxStillingarHandler(ActionEvent actionEvent) {
-        ViewSwitcher.switchTo(View.STILLINGAR);
+        System.out.println("Stillingar button clicked");
+        {
+            System.out.println("Switching to stillingar-view.fxml");
+            ViewSwitcher.switchTo(View.STILLINGAR);
         }
 
     }
+}
