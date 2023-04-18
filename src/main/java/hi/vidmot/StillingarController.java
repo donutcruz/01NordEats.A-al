@@ -25,7 +25,9 @@ public class StillingarController {
     /* Skoða þetta aðeins betur, þarf að kóða betur
      */
     public void initialize() {
-        // setja intialize method hérna inni til að fá info frá viðskiptavin class?
+        PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
+        fxVidskiptavinur.textProperty().bind(pontunController.getVidskiptavinur().nafnProperty());
+        fxHeimilisfang.textProperty().bind(pontunController.getVidskiptavinur().heimilisfangProperty());
     }
 
         public void fxBreytaStillingar (ActionEvent actionEvent){
