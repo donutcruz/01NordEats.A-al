@@ -2,35 +2,61 @@ package hi.vidmot;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 
 public class StillingarController {
 
-    @FXML
-    public Label fxVidskiptavinur;
+    private PontunController pontunController;
 
-    @FXML
-    public Label fxHeimilisfang;
-
-    @FXML
-    public Label fxGreidslaInfo;
-    public Button fxVistaStillingar;
-    public Button fxBreytaStillingar;
-
-    public void initialize() {
-        PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
-        fxVidskiptavinur.textProperty().bind(pontunController.getVidskiptavinur().nafnProperty());
-        fxHeimilisfang.textProperty().bind(pontunController.getVidskiptavinur().heimilisfangProperty());
+    public void setPontunController(PontunController pontunController) {
+        this.pontunController = pontunController;
     }
 
-        public void fxBreytaStillingar (ActionEvent actionEvent){
-        }
+    @FXML
+    private AnchorPane stillingarAnchorPane;
 
-        public void fxTilbakaHandler (ActionEvent actionEvent) {
-            ViewSwitcher.switchTo(View.PONTUN);
-        }
+    @FXML
+    private Label fxNafn;
 
-    public void fxVistaStillingarhandler(ActionEvent actionEvent) {
+    @FXML
+    private Label fxHeimilisfang;
+
+    @FXML
+    private Label fxPnr;
+
+    @FXML
+    private Label fxNetfang;
+
+    @FXML
+    private Button fxBreytaStillingar;
+
+    @FXML
+    private Button fxVistaStillingar;
+
+    @FXML
+    private void fxVistaStillingarhandler(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Stillingar vistaðar");
+        alert.setHeaderText(null);
+        alert.setContentText("Stillingar hafa verið vistaðar!");
+        alert.showAndWait();
+    }
+
+    @FXML
+    private void fxBreytaStillingar(ActionEvent event) {
+        fxNafn.setDisable(false);
+        fxHeimilisfang.setDisable(false);
+        fxPnr.setDisable(false);
+        fxNetfang.setDisable(false);
+        fxBreytaStillingar.setDisable(true);
+        fxVistaStillingar.setDisable(false);
+    }
+
+    @FXML
+    private void fxTilbakaHandler(ActionEvent event) {
+        ViewSwitcher.switchTo(View.PONTUN);
     }
 }
