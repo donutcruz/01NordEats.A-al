@@ -4,11 +4,15 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.InnskraView">
+<AnchorPane prefHeight="400.0" prefWidth="541.0" style="-fx-background-color: #9DC08B;" stylesheets="@../../../java/css/stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.InnskraView">
    <children>
-      <Button fx:id="fxInnskra" layoutX="216.0" layoutY="225.0" mnemonicParsing="false" onAction="#fxInnskraHandler" prefHeight="26.0" prefWidth="110.0" text="Innskra" />
-      <ImageView fitHeight="116.0" fitWidth="150.0" layoutX="212.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="fxInnskra" layoutX="216.0" layoutY="225.0" mnemonicParsing="false" onAction="#fxInnskraHandler" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #EDF1D6;" text=" Innskrá">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="116.0" fitWidth="150.0" layoutX="212.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #9DC08B; -fx-blend-mode: #9DC08B;">
          <image>
             <Image url="@../../../java/img/nordlogo.png" />
          </image>
