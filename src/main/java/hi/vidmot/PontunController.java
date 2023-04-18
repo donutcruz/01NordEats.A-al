@@ -51,8 +51,11 @@ public class PontunController {
      * @param actionEvent
      */
     public void fxGreidaHandler(ActionEvent actionEvent) {
-        if (vidskiptavinur !=null)
+        System.out.println("Greiða button clicked");
+        {
+            System.out.println("Switching to greida-view.fxml");
             ViewSwitcher.switchTo(View.GREIDSLA);
+        }
     }
 
 

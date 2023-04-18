@@ -34,10 +34,10 @@ public class ViewSwitcher {
             Parent root;
             FXMLLoader loader = null;
             if (cache.containsKey(view)) {
-                System.out.println("Loading from cache");
+                System.out.println("Loading from cache: " + view.name());
                 root = cache.get(view);
             } else {
-                System.out.println("Loading from FXML");
+                System.out.println("Loading from FXML: " + view.getFileName());
                 loader = new FXMLLoader(ViewSwitcher.class.getResource(view.getFileName()));
                 root = loader.load();
 
