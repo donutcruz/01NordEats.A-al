@@ -38,4 +38,7 @@ public class StillingarController {
             stage.setScene(scene);
             stage.show();
         }
+
+    public void fxVistaStillingarhandler(ActionEvent actionEvent) {
     }
+}
