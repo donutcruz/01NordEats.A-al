@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="541.0" style="-fx-background-color: #9DC08B;" stylesheets="@../../../java/css/stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.InnskraView">
+<AnchorPane prefHeight="466.0" prefWidth="596.0" style="-fx-background-color: #9DC08B;" stylesheets="@../../../java/css/stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.InnskraView">
    <children>
       <Button fx:id="fxInnskra" layoutX="216.0" layoutY="225.0" mnemonicParsing="false" onAction="#fxInnskraHandler" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #EDF1D6;" text=" Innskrá">
          <font>
