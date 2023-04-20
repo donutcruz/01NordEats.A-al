@@ -51,13 +51,7 @@ public class GreidslaController {
 
 
         // Búum til tímalínu
-        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
-            countdownSeconds--;
-            int minutes = countdownSeconds / 60;
-            int seconds = countdownSeconds % 60;
-            fxBidtimi.setText(String.format("%02d:%02d", minutes, seconds));
-            if (countdownSeconds == 0) {
-                timeline.stop(); // Stoppum tímann
+        
 
                 // Bætum kóðanum okkar til að meðhöndla biðtímann
 
