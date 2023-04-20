@@ -1,13 +1,13 @@
 package hi.vidmot;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 
 public class StillingarController {
-
     @FXML
     public TextField fxVidskiptavinur;
 
@@ -15,14 +15,27 @@ public class StillingarController {
     public TextField fxHeimilisfang;
 
     @FXML
-    public TextField fxGreidslaInfo;
+    public ChoiceBox<String> fxGreidslaInfo;
+    public Label minnGreidslumata;
+
+    @FXML
     public Button fxVistaStillingar;
+
+    @FXML
     public Button fxBreytaStillingar;
 
     public void initialize() {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         fxVidskiptavinur.textProperty().bind(pontunController.getVidskiptavinur().nafnProperty());
         fxHeimilisfang.textProperty().bind(pontunController.getVidskiptavinur().heimilisfangProperty());
+
+        // Add choices to the choice box
+        fxGreidslaInfo.getItems().addAll("Við afhendingu", "Kortagreiðsla", "Aur");
+    }
+
+    public void getGredslumata(ActionEvent event) {
+        String minnGreidslumataText = (String) fxGreidslaInfo.getValue();
+        minnGreidslumata.setText(minnGreidslumataText);
     }
 
     @FXML
