@@ -51,6 +51,5 @@ public class GreidslaController {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         pontunController.taemaKorfu();
         ViewSwitcher.switchTo(View.PONTUN);
-        timeline.stop(); // Stop the timer when leaving the scene
     }
 }

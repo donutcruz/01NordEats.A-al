@@ -5,14 +5,14 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class TakeAwayApplication extends Application {
+public class NordEatsApplication extends Application {
     @Override
     public void start(Stage stage)  {
         var scene = new Scene(new Pane()); // dummy rót fær aðra rót seinna
         stage.setResizable(false);
         ViewSwitcher.setScene(scene);
         ViewSwitcher.switchTo(View.INNSKRA);
-        stage.setTitle("TakeAway");
+        stage.setTitle("NördEats! ");
         stage.setScene(scene);
         stage.show();
     }
