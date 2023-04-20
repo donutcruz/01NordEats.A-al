@@ -9,7 +9,7 @@
     -fx-background-color: #FFDE59;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
-    -fx-padding: px px;
+    -fx-padding: 8px 20px;
     -fx-border-radius: 25px;
     -fx-background-radius: 5px;
 }
@@ -39,27 +39,8 @@
     -fx-border-color: #3f51b5;
 }
 
-/* Styling for table views */
-.table-view {
-    -fx-font-size: 14px;
-    -fx-selection-bar: #3f51b5;
-    -fx-selection-bar-non-focused: #ccc;
-}
-
-/* Styling for table columns */
-.table-column {
-    -fx-font-size: 14px;
-    -fx-alignment: center-left;
-}
-
-/* Styling for table cells */
-.table-cell {
-    -fx-font-size: 14px;
-    -fx-alignment: center-left;
-}
-
-/* Styling for combo boxes */
-.combo-box {
+/* Styling for choice boxes */
+.choice-box {
     -fx-font-size: 14px;
     -fx-padding: 5px;
     -fx-background-radius: 5px;
@@ -68,20 +49,6 @@
     -fx-border-width: 1px;
 }
 
-.combo-box:focused {
-    -fx-border-color: #3f51b5;
-}
-
-/* Styling for list views */
-.list-view {
-    -fx-font-size: 14px;
-    -fx-padding: 5px;
-    -fx-background-radius: 5px;
-    -fx-border-radius: 5px;
-    -fx-border-color: #ccc;
-    -fx-border-width: 1px;
-}
-
-.list-view:focused {
+.choice-box:focused {
     -fx-border-color: #3f51b5;
 }
