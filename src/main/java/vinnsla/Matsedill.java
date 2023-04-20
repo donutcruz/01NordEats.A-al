@@ -20,7 +20,6 @@ public class Matsedill {
         veitingar.add (new Veitingar ("Margarita Pizza + gos að eigin vali", 2400 ));
         veitingar.add (new Veitingar ("Kjötveisla Pizza + brauðstangir", 3500 ));
 
-        veitingar.add (new Veitingar ("Pizzur", 0 ));
         veitingar.add (new Veitingar ("Margarita Pizza", 2290 ));
         veitingar.add (new Veitingar ("Kjötveisla Pizza", 2590 ));
         veitingar.add (new Veitingar ("Vegan Pizza", 1890));
