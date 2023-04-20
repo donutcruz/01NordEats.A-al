@@ -15,12 +15,9 @@ import javax.swing.tree.DefaultTreeModel;
 import java.io.IOException;
 import java.util.Optional;
 
-/******************************************************************************
- *
- *  Lýsing  : Controller fyrir pöntunarsenuna
- *
- *
- *****************************************************************************/
+/**
+ * Controller fyrir pöntunarsenuna
+ */
 public class PontunController {
 
     public Button fxStillingar;
@@ -63,7 +60,7 @@ public class PontunController {
 
 
     /**
-     * s
+     *
      * Setja valdar veitingar í körfu  ef eitthvað er valið
      *
      * @param actionEvent
@@ -132,10 +129,10 @@ public class PontunController {
 
     public void fxStillingarHandler(ActionEvent actionEvent) {
         System.out.println("Stillingar button clicked");
-        // switch to the Stillingar scene and print out what scene you are switching to
+        //breytum yfir í Stillingar senu og prentum út senuna sem við erum að skipta
         System.out.println("Switching to stillingar-view.fxml");
         ViewSwitcher.switchTo(View.STILLINGAR);
-        // get the root of the Stillingar scene from the cache
+        // náum í rótina af Stillingar senunni frá cache
         Parent stillingarRoot = ViewSwitcher.lookupRoot(View.STILLINGAR);
     }
 }

@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Breytum til þess að hafa með cache af controllers
  *
- * EÞH - changed to include caching of controllers
  */
 public class ViewSwitcher {
 

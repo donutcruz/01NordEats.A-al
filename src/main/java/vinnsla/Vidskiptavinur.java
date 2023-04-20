@@ -3,12 +3,12 @@ package vinnsla;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/******************************************************************************
- *
- *  Lýsing  : Vinnsluklasi fyrir viðskiptavin
- *
- *
- *****************************************************************************/
+
+/**
+ * Lýsing  : Vinnsluklasi fyrir viðskiptavin
+ */
+
+
 public class Vidskiptavinur {
     private final StringProperty nafn = new SimpleStringProperty();
     private final StringProperty heimilisfang = new SimpleStringProperty();

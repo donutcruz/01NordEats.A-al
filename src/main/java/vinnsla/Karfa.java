@@ -4,13 +4,12 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.ListChangeListener;
 
-/******************************************************************************
-
- *  Lýsing  : Vinnsluklasi fyrir körfu. Karfa er eins konar matseðill en
+/**
+ *  Vinnsluklasi fyrir körfu. Karfa er eins konar matseðill en
  *  hefur heildarverð
- *
- *
- *****************************************************************************/
+ */
+
+
 public class Karfa extends Matsedill {
 
     private final IntegerProperty heildarVerd = new SimpleIntegerProperty();

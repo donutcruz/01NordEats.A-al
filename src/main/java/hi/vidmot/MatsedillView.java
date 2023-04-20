@@ -7,11 +7,9 @@ import javafx.scene.control.ListView;
 
 import java.io.IOException;
 
-/******************************************************************************
- *  Lýsing  : Viðmótshlutur fyrir matseðil af veitingum
- *
- *
- *****************************************************************************/
+/**
+ * Viðmótshlutur fyrir matseðil af veitingum
+ */
 public class MatsedillView extends ListView<Veitingar> {
 
     public MatsedillView() {

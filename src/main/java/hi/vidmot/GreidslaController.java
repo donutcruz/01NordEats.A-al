@@ -9,7 +9,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
+
+/**
+ * Byrjum á því að importa öll libraries
+ */
+
 import java.util.concurrent.atomic.AtomicInteger;
+
 
 public class GreidslaController {
 
@@ -22,8 +28,10 @@ public class GreidslaController {
     private Button fxStadfestaPontun;
 
     /**
-     * upphafsstilla reglur sem tengja senurnar
+     * Skilgreinum klasa GreislaController.
+     * Upphafsstilla reglur sem tengja senurnar
      */
+
     public void initialize() {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         fxVerd.textProperty().bind(pontunController.getKarfa().heildarVerdProperty().asString());
@@ -41,6 +49,18 @@ public class GreidslaController {
         alert.setContentText("Yibbí Pöntun staðfest !\n" + "Áætluð afhending NördEats: " + String.format("%02d:%02d", countdownSeconds.get() / 60, countdownSeconds.get() % 60));
         alert.show();
 
+
+        // Búum til tímalínu
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            countdownSeconds--;
+            int minutes = countdownSeconds / 60;
+            int seconds = countdownSeconds % 60;
+            fxBidtimi.setText(String.format("%02d:%02d", minutes, seconds));
+            if (countdownSeconds == 0) {
+                timeline.stop(); // Stoppum tímann
+
+                // Bætum kóðanum okkar til að meðhöndla biðtímann
+
         Timeline timeline = null; // Initialize the timeline variable
         Timeline finalTimeline = timeline;
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), evt -> {
@@ -50,6 +70,7 @@ public class GreidslaController {
                 finalTimeline.stop();
             } else {
                 alert.setContentText("Yibbí Pöntun staðfest !\n" + "Áætluð afhending NördEats: " + String.format("%02d:%02d", countdownSeconds.get() / 60, countdownSeconds.get() % 60));
+
             }
         }, new javafx.animation.KeyValue[]{}));
         timeline.setCycleCount(countdownSeconds.get());

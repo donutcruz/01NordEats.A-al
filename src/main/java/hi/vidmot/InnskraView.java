@@ -8,6 +8,10 @@ import vinnsla.Vidskiptavinur;
 
 import java.util.Optional;
 
+/**
+ * Byrjum að importa libraries
+ */
+
 public class InnskraView {
 
     @FXML
