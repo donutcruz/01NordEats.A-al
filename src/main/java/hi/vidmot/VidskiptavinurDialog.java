@@ -8,12 +8,10 @@ import vinnsla.Vidskiptavinur;
 
 import java.io.IOException;
 import java.util.Optional;
+/**
+ * Dialogur til að skrá viðskiptavin
+ */
 
-/******************************************************************************
- *  Lýsing  : Dialogur til að skrá viðskiptavin
- *
- *
- *****************************************************************************/
 public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
 
     @FXML
@@ -41,7 +39,7 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
     public void BreytaStillingVidskiptavinur() {
         Optional<Vidskiptavinur> result = showAndWait();
         if (result.isPresent()) {
-            // Update the Vidskiptavinur object with the new values
+            // Uppfærum Viðskiptavinur object með nýjum gildum
             vidskiptavinur.setNafn(fxNafn.getText());
             vidskiptavinur.setHeimilisfang(fxHeimilisfang.getText());
         }

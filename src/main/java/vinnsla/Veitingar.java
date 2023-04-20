@@ -5,11 +5,11 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/******************************************************************************
- *  Lýsing  : Vinnsluklasi fyrir veitingar. Hefur heiti og verð.
- *
- *
- *****************************************************************************/
+/**
+ *  Vinnsluklasi fyrir veitingar. Hefur heiti og verð.
+ */
+
+
 public class Veitingar {
 
     private final StringProperty heiti = new SimpleStringProperty();

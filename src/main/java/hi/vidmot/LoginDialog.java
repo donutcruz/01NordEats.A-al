@@ -9,12 +9,9 @@ import javafx.scene.control.TextInputDialog;
 
 import java.io.IOException;
 
-/******************************************************************************
- *
- *  Lýsing  : Gluggi fyrir innskráningu
- *
- *
- *****************************************************************************/
+/**
+ *  Búum til glugga fyrir innskráningu
+ */
 public class LoginDialog  {
 
     public TextInputDialog upphafsstilla () {
