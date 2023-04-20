@@ -7,6 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
+/**
+ * 
+ */
+
 public class GreidslaController {
 
     public Label fxVidskiptavinur;
