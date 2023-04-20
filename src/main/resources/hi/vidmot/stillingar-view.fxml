@@ -11,16 +11,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="466" prefWidth="596.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.StillingarController">
-   <ImageView fitHeight="489.0" fitWidth="626.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
+<AnchorPane prefHeight="563" prefWidth="736.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.StillingarController" stylesheets="@stillingar.css">
+   <ImageView fitHeight="606.0" fitWidth="787.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@stillingarbakgrunn.png" />
       </image>
    </ImageView>
-   <Button fx:id="fxBreytaStillingar" layoutX="33.0" layoutY="260.0" onAction="#fxBreytaStillingar" prefHeight="34.0" prefWidth="120.0" text="Breyta Stillingum" />
-   <Button fx:id="fxVistaStillingar" layoutX="33.0" layoutY="311.0" onAction="#fxVistaStillingarhandler" prefHeight="34.0" prefWidth="120.0" text="Vista" />
-   <Button layoutX="33.0" layoutY="359.0" onAction="#fxTilbakaHandler" prefHeight="34.0" prefWidth="120.0" text="Tilbaka" />
-   <VBox layoutX="233.0" layoutY="173.0" prefHeight="231.0" prefWidth="335.0">
+   <Button fx:id="fxBreytaStillingar" layoutX="87.0" layoutY="382.0" onAction="#fxBreytaStillingar" prefHeight="34.0" prefWidth="120.0" text="Breyta Stillingum" />
+   <Button fx:id="fxVistaStillingar" layoutX="87.0" layoutY="433.0" onAction="#fxVistaStillingarhandler" prefHeight="34.0" prefWidth="120.0" text="Vista" />
+   <Button layoutX="87.0" layoutY="481.0" onAction="#fxTilbakaHandler" prefHeight="34.0" prefWidth="120.0" text="Tilbaka" />
+   <VBox layoutX="341.0" layoutY="244.0" prefHeight="231.0" prefWidth="335.0">
       <children>
          <Label prefHeight="25.0" prefWidth="80.0" text="Nafn:">
             <font>

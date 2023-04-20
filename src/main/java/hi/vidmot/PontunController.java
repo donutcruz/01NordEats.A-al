@@ -39,7 +39,7 @@ public class PontunController {
     public void initialize() throws IOException {
         fxKarfa.setItems(karfa.getVeitingar()); // tengja viðmót og vinnslu
         fxSamtals.textProperty().bind(karfa.heildarVerdProperty().asString()); // bindum saman körfu
-        InnskraView inn = (InnskraView) ViewSwitcher.lookup(View.INNSKRA);
+        InnskraController inn = (InnskraController) ViewSwitcher.lookup(View.INNSKRA);
         vidskiptavinur = inn.getVidskiptavinur();
         fxInnskraning.setText(vidskiptavinur.getNafn());
     }
@@ -87,23 +87,21 @@ public class PontunController {
      * @param actionEvent
      */
     public void fxInnskraningHandler(ActionEvent actionEvent) {
-        if (vidskiptavinur == null) {
-            nyrVidskiptavinur();
-        } else {
-            skraInn();
+        // If a user is already logged in, display their name
+        if (Vidskiptavinur.getCurrentUser() != null) {
+            fxInnskraning.setText("innskráð(ur) " + Vidskiptavinur.getCurrentUser().getNafn());
         }
-    }
-
-    /**
-     * Innskrá viðskiptavin
-     */
-    private void skraInn() {
-        LoginDialog login = new LoginDialog();
-        TextInputDialog t = login.upphafsstilla();
-        Optional<String> o = t.showAndWait();
-        o.ifPresent((value) -> {
-            fxInnskraning.setText("innskráð(ur) " + vidskiptavinur.getNafn());
-        });
+        // If no user is logged in, prompt for login credentials
+        else {
+            LoginDialog login = new LoginDialog();
+            TextInputDialog t = login.upphafsstilla();
+            Optional<String> o = t.showAndWait();
+            o.ifPresent((value) -> {
+                // Set the current user and display their name
+                Vidskiptavinur.setCurrentUser(vidskiptavinur);
+                fxInnskraning.setText("innskráð(ur) " + vidskiptavinur.getNafn());
+            });
+        }
     }
 
     /**

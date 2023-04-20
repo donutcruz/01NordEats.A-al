@@ -1,0 +1,20 @@
+/* Set default font and text color for all elements */
+* {
+    -fx-font-family: "Arial Unicode MS";
+    -fx-text-fill: #030303;
+}
+
+/* Styling for buttons */
+.button {
+    -fx-background-color: #FFDE59;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: px px;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #030303;
+    -fx-text-fill: #fff;
+}
