@@ -13,7 +13,16 @@
    </ImageView>
    <BorderPane layoutX="32.0" layoutY="114.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="416.0" prefWidth="694.0" stylesheets="@pontun.css">
       <center>
-         <MatsedillView fx:id="fxMatsedill" />
+         <VBox>
+            <Label text="Tilboð" style="-fx-text-fill: white;"></Label>
+            <MatsedillView fx:id="fxMatsedill" />
+            <Label text="Pizzur" style="-fx-text-fill: white;"></Label>
+            <MatsedillView />
+            <Label text="Meðlæti" style="-fx-text-fill: white;"></Label>
+            <MatsedillView />
+            <Label text="Drykkir" style="-fx-text-fill: white;"></Label>
+            <MatsedillView />
+         </VBox>
       </center>
       <top>
          <AnchorPane prefHeight="60.0" prefWidth="692.0" BorderPane.alignment="CENTER">
