@@ -11,47 +11,45 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="563" prefWidth="736.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.StillingarController" stylesheets="@stillingar.css">
-   <ImageView fitHeight="606.0" fitWidth="787.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@stillingarbakgrunn.png" />
-      </image>
+<AnchorPane prefHeight="563" prefWidth="736.0" stylesheets="@stillingar.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.StillingarController">
+   <ImageView fitHeight="584.0" fitWidth="754.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@stillingarbakgrunn.png"/>
    </ImageView>
-   <Button fx:id="fxBreytaStillingar" layoutX="87.0" layoutY="382.0" onAction="#fxBreytaStillingar" prefHeight="34.0" prefWidth="120.0" text="Breyta Stillingum" />
-   <Button fx:id="fxVistaStillingar" layoutX="87.0" layoutY="433.0" onAction="#fxVistaStillingarhandler" prefHeight="34.0" prefWidth="120.0" text="Vista" />
-   <Button layoutX="87.0" layoutY="481.0" onAction="#fxTilbakaHandler" prefHeight="34.0" prefWidth="120.0" text="Tilbaka" />
-   <VBox layoutX="341.0" layoutY="244.0" prefHeight="231.0" prefWidth="335.0">
-      <children>
-         <Label prefHeight="25.0" prefWidth="80.0" text="Nafn:">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Label>
-         <TextField fx:id="fxVidskiptavinur" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="28.0" prefWidth="158.0">
-            <VBox.margin>
-               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </VBox.margin>
-         </TextField>
-         <Label prefHeight="25.0" prefWidth="80.0" text="Heimilisfang:">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Label>
-         <TextField fx:id="fxHeimilisfang" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="27.0" prefWidth="139.0">
-            <VBox.margin>
-               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </VBox.margin>
-         </TextField>
-         <Label prefHeight="28.0" prefWidth="144.0" text="Veldu Greiðslumáta: ">
-            <font>
-               <Font size="14.0" />
-            </font>
-         </Label>
-         <ChoiceBox fx:id="fxGreidslaInfo" prefHeight="30.0" prefWidth="156.0">
-            <VBox.margin>
-               <Insets left="10.0" right="10.0" />
-            </VBox.margin>
-         </ChoiceBox>
-      </children>
+   <Button fx:id="fxBreytaStillingar" layoutX="60.0" layoutY="341.0" onAction="#fxBreytaStillingar" prefHeight="34.0" prefWidth="150.0" text="Breyta Stillingum" />
+   <Button fx:id="fxVistaStillingar" layoutX="60.0" layoutY="398.0" onAction="#fxVistaStillingarhandler" prefHeight="34.0" prefWidth="150.0" text="Vista" />
+   <Button layoutX="60.0" layoutY="457.0" onAction="#fxTilbakaHandler" prefHeight="34.0" prefWidth="150.0" text="Tilbaka" />
+   <VBox layoutX="310.0" layoutY="229.0" prefHeight="225.0" prefWidth="340.0">
+      <Label prefHeight="25.0" prefWidth="80.0" text="Nafn:">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxVidskiptavinur" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="28.0"
+                 prefWidth="158.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </VBox.margin>
+      </TextField>
+      <Label prefHeight="25.0" prefWidth="80.0" text="Heimilisfang:">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Label>
+      <TextField fx:id="fxHeimilisfang" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="27.0"
+                 prefWidth="139.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </VBox.margin>
+      </TextField>
+      <Label prefHeight="28.0" prefWidth="144.0" text="Veldu Greiðslumáta: ">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Label>
+      <ChoiceBox fx:id="fxGreidslaInfo" prefHeight="12.0" prefWidth="164.0">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0"/>
+         </VBox.margin>
+      </ChoiceBox>
    </VBox>
 </AnchorPane>

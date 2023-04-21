@@ -9,9 +9,15 @@
     -fx-background-color: #FFDE59;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
-    -fx-padding: px px;
+    -fx-padding: 0px 0px;
     -fx-border-radius: 25px;
     -fx-background-radius: 5px;
+}
+
+.choice-box{
+    -fx-background-color: #FFDE59;
+    -fx-font-size: 8px;
+    -fx-padding: 0px 5px;
 }
 
 .button:hover {

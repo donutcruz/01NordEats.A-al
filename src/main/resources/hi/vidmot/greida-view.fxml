@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
@@ -11,51 +12,56 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="563.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.GreidslaController" stylesheets="@greida.css">
-   <children>
-      <ImageView fitHeight="582.0" fitWidth="776.0" layoutX="-17.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@GreidslaBakgrunn.png" />
-         </image>
-      </ImageView>
-      <GridPane layoutX="246.0" layoutY="387.0" prefHeight="101.0" prefWidth="451.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="246.0">
-        <columnConstraints>
+<AnchorPane prefHeight="563.0" prefWidth="736.0" stylesheets="@greida.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.GreidslaController">
+    <ImageView fitHeight="582.0" fitWidth="776.0" layoutX="-17.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+          <Image url="@GreidslaBakgrunn.png" />
+        </image>
+    </ImageView>
+    <GridPane layoutX="246.0" layoutY="364.0" prefHeight="132.0" prefWidth="450.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="246.0">
+      <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.6666666666667" minWidth="10.0" prefWidth="200.66666666666669" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="0.0" prefWidth="190.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="never" />
-        </rowConstraints>
-         <children>
-            <Label prefHeight="32.0" prefWidth="186.0" text="Samtals:">
-               <font>
+      </columnConstraints>
+      <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+         <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="11.0" vgrow="NEVER" />
+      </rowConstraints>
+        <children>
+          <Label prefHeight="32.0" prefWidth="186.0" text="Samtals:">
+              <font>
                   <Font size="14.0" />
-               </font></Label>
-            <Label prefHeight="104.0" prefWidth="298.0" text="Veitingarnar verða afhentar til " GridPane.rowIndex="1">
-               <font>
+              </font>
+          </Label>
+          <Label prefHeight="104.0" prefWidth="298.0" text="Veitingarnar verða afhentar til :" GridPane.rowIndex="1">
+              <font>
                   <Font size="14.0" />
-               </font></Label>
-            <Label fx:id="fxVerd" prefHeight="49.0" prefWidth="189.0" text="0" GridPane.columnIndex="1">
-               <font>
+              </font>
+          </Label>
+          <Label fx:id="fxVerd" prefHeight="49.0" prefWidth="189.0" text="0" GridPane.columnIndex="1">
+              <font>
                   <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="fxVidskiptavinur" layoutX="211.0" layoutY="10.0" prefHeight="49.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
+              </font>
+          </Label>
+          <Label fx:id="fxVidskiptavinur" layoutX="211.0" layoutY="10.0" prefHeight="49.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <font>
                   <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="fxHeimilisfang" prefHeight="30.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <font>
+              </font>
+          </Label>
+          <Label fx:id="fxHeimilisfang" prefHeight="30.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <font>
                   <Font size="14.0" />
-               </font></Label>
-         </children>
-      </GridPane>
+              </font>
+          </Label>
+         <Label prefHeight="22.0" prefWidth="251.0" text="Greiðslumáta:" GridPane.rowIndex="3" />
+         <ChoiceBox fx:id="fxGreidslumataInfo" prefHeight="39.0" prefWidth="190.0" stylesheets="@greida.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        </children>
+    </GridPane>
 
-      <Button layoutX="22.0" layoutY="479.0" mnemonicParsing="false" onAction="#pontunHandler" prefHeight="46.0" prefWidth="140.0" text="Til baka í pöntun" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="22.0" />
-      <Button fx:id="fxStadfestaPontun" layoutX="22.0" layoutY="398.0" mnemonicParsing="false" onAction="#fxStadfestaPontunHandler" prefHeight="46.0" prefWidth="140.0" text="Staðfesta Pöntun" />
-      <ListView fx:id="fxKarfa" layoutX="262.0" layoutY="188.0" prefHeight="147.0" prefWidth="435.0" />
-   </children>
+    <Button layoutX="22.0" layoutY="452.0" mnemonicParsing="false" onAction="#pontunHandler" prefHeight="46.0" prefWidth="140.0" text="Til baka í pöntun" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="22.0" />
+    <Button fx:id="fxStadfestaPontun" layoutX="22.0" layoutY="301.0" mnemonicParsing="false" onAction="#fxStadfestaPontunHandler" prefHeight="46.0" prefWidth="140.0" text="Staðfesta Pöntun" />
+    <ListView fx:id="fxGreidsluKarfa" layoutX="262.0" layoutY="188.0" prefHeight="147.0" prefWidth="435.0" />
+   <Button fx:id="fxHaettaVid" layoutX="22.0" layoutY="377.0" mnemonicParsing="false" onAction="#HaettaVidHandler" prefHeight="46.0" prefWidth="140.0" text="Hætta Við" />
 </AnchorPane>

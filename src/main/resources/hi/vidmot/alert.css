@@ -1,0 +1,19 @@
+.my-alert {
+    -fx-background-color: #ffeeba; /* Set the background color to a light yellow */
+}
+
+.my-alert .alert-button {
+    -fx-background-color: #FFDE59; /* Set the button color to a blue */
+    -fx-text-fill: white; /* Set the text color to white */
+}
+
+.my-alert .alert-header {
+    -fx-background-color: #FFDE59;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.my-alert .alert-content {
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}

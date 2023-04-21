@@ -1,0 +1,56 @@
+/* Styling for the dialog pane */
+.dialog-pane {
+    -fx-background-color: #ff0000; /* Set the background color to red */
+}
+
+/* Set default font and text color for all elements */
+* {
+    -fx-font-family: "Arial Unicode MS";
+    -fx-text-fill: #030303;
+}
+
+/* Styling for the dialog pane */
+.dialog {
+    -fx-background-color: #181818;
+}
+
+/* Styling for the dialog header label */
+.dialog-header {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Styling for the username and password labels */
+.content .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Styling for the username and password fields */
+.content .text-field, .content .password-field {
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+}
+
+.content .text-field:focused, .content .password-field:focused {
+    -fx-border-color: #3f51b5;
+}
+
+/* Styling for the dialog buttons */
+.dialog-pane > .button-bar > .container > .button {
+    -fx-background-color: #FFDE59;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 20px;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 5px;
+}
+
+.dialog-pane > .button-bar > .container > .button:hover {
+    -fx-background-color: #030303;
+    -fx-text-fill: #fff;
+}

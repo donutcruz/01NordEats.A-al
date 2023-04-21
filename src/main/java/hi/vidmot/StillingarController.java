@@ -1,16 +1,17 @@
 package hi.vidmot;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+
 
 /**
  * Búum til klasa StillingarController sem inniheldur Textfield af Viðskiptavinur, heimilisfang osfrv.
  *
  */
+
+import java.util.Objects;
+
 
 public class StillingarController {
     @FXML
@@ -43,7 +44,7 @@ public class StillingarController {
     }
 
     public void getGredslumata(ActionEvent event) {
-        String minnGreidslumataText = (String) fxGreidslaInfo.getValue();
+        String minnGreidslumataText = fxGreidslaInfo.getValue();
         minnGreidslumata.setText(minnGreidslumataText);
     }
 
@@ -67,6 +68,11 @@ public class StillingarController {
         alert.setTitle("Stillingar vistaðar");
         alert.setHeaderText(null);
         alert.setContentText("Stillingar hafa verið vistaðar!");
+
+        // Set custom styles for the alert window
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add(Objects.requireNonNull(getClass().getResource("alert.css")).toExternalForm());
+        dialogPane.getStyleClass().add("my-alert");
         alert.showAndWait();
     }
 }

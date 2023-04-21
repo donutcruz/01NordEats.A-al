@@ -11,7 +11,7 @@ import java.io.IOException;
  */
 public class LoginDialog {
     private TextField usernameField;
-    private PasswordField passwordField;
+
 
     /**
      * Búum til Textdialog þar sem LoginDialog er lesið
@@ -27,7 +27,6 @@ public class LoginDialog {
                 new ButtonType("Í lagi", ButtonBar.ButtonData.OK_DONE),
                 new ButtonType("Hætta við", ButtonBar.ButtonData.CANCEL_CLOSE));
         dialogPane.setContent(usernameField);
-        dialogPane.setContent(passwordField);
         dialog.setDialogPane(dialogPane);
 
         // Bætum við event handler til að eyða hnappi til að loka forritinu
