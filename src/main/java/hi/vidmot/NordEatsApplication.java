@@ -5,6 +5,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+/**
+ * Application-ið sem mun keyra forritið.
+ */
+
 public class NordEatsApplication extends Application {
     @Override
     public void start(Stage stage)  {
@@ -16,6 +20,11 @@ public class NordEatsApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+    /**
+     * Launch-ar forritið
+     * @param args
+     */
 
     public static void main(String[] args) {
         launch();

@@ -11,6 +11,12 @@ import javafx.util.Duration;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ *
+ * Skilgreinum klasa sem sér um Greiðsluna
+ * Upphafsstillum reglur sem tengja senurnar
+ */
+
 public class GreidslaController {
 
     public Label fxVidskiptavinur;
@@ -21,9 +27,7 @@ public class GreidslaController {
     @FXML
     private Button fxStadfestaPontun;
 
-    /**
-     * upphafsstilla reglur sem tengja senurnar
-     */
+
     public void initialize() {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         fxVerd.textProperty().bind(pontunController.getKarfa().heildarVerdProperty().asString());
@@ -31,17 +35,23 @@ public class GreidslaController {
         fxHeimilisfang.textProperty().bind(pontunController.getVidskiptavinur().heimilisfangProperty());
     }
 
+    /**
+     *
+     * @param event þegar að notandi hefur staðfest pöntun byrjar timerinn
+     * @return afhendingartími pöntunarinnar
+     */
+
     @FXML
     private void fxStadfestaPontunHandler(ActionEvent event) {
-        AtomicInteger countdownSeconds = new AtomicInteger(15 * 60); // 15 minutes in seconds
+        AtomicInteger countdownSeconds = new AtomicInteger(15 * 60); // 15 mínútur í sekúndur
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION); //Stillum viðvöruskilaboðin eftir að Pöntun sé staðfest
         alert.setTitle("Pöntun Staðfest");
         alert.setHeaderText(null);
         alert.setContentText("Yibbí Pöntun staðfest !\n" + "Áætluð afhending NördEats: " + String.format("%02d:%02d", countdownSeconds.get() / 60, countdownSeconds.get() % 60));
         alert.show();
 
-        Timeline timeline = null; // Initialize the timeline variable
+        Timeline timeline = null; // Frumstillum tímalínu breytuna
         Timeline finalTimeline = timeline;
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), evt -> {
             int i = countdownSeconds.getAndDecrement();
@@ -60,6 +70,7 @@ public class GreidslaController {
      * Handler fyrir að fara aftur í pöntunarsenu
      *
      * @param actionEvent
+     *
      */
     public void pontunHandler(ActionEvent actionEvent) {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);

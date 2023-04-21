@@ -10,7 +10,6 @@ import java.util.Map;
 
 /**
  * Breytum til þess að hafa með cache af controllers
- *
  */
 public class ViewSwitcher {
 
@@ -20,9 +19,20 @@ public class ViewSwitcher {
     private static final Map<View, Object> controllers = new HashMap<>();
     private static Scene scene;
 
+    /**
+     * Setjum upp ViewSwitcher senuna
+     * @param scene
+     */
+
     public static void setScene(Scene scene) {
         ViewSwitcher.scene = scene;
     }
+
+    /**
+     * Setjum upp View. Ef senan er null þá prentast út engin sena
+     * @param view
+     *
+     */
 
     public static void switchTo(View view) {
         if (scene == null) {
@@ -53,6 +63,12 @@ public class ViewSwitcher {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Sér um cache í Foreldrinu
+     * @param v
+     * @return cache.get(v);
+     */
 
     public static Object lookup(View v) {
         return controllers.get(v);

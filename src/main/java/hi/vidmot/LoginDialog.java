@@ -7,10 +7,18 @@ import java.io.IOException;
 
 /**
  * Búum til glugga fyrir innskráningu
+ * Notandi gefur upp nafn og heimilisfang(lykilorð)
  */
 public class LoginDialog {
     private TextField usernameField;
     private PasswordField passwordField;
+
+    /**
+     * Búum til Textdialog þar sem LoginDialog er lesið
+     * @param Lesa LoginDialog
+     * @param Buttons til að velja á milli "Í lagi" "Hætta við"
+     * @return login-view.fxml skráin kemur
+     */
 
     public TextInputDialog upphafsstilla() {
         TextInputDialog dialog = new TextInputDialog();
@@ -22,7 +30,7 @@ public class LoginDialog {
         dialogPane.setContent(passwordField);
         dialog.setDialogPane(dialogPane);
 
-        // Add event handler to cancel button to close the program
+        // Bætum við event handler til að eyða hnappi til að loka forritinu
         Button cancelButtonNode = (Button) dialogPane.lookupButton(dialogPane.getButtonTypes().get(1));
         cancelButtonNode.setOnAction(event -> System.exit(0));
 

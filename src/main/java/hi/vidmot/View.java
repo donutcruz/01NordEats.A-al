@@ -1,5 +1,9 @@
 package hi.vidmot;
 
+/**
+ * Notandi getur séð yfirlit af forritinu þ.e Pöntun, Stillingar ofl.
+ */
+
 
 public enum View {
     PONTUN("pontun-view.fxml"),

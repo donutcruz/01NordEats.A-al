@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.Optional;
 /**
  * Dialogur til að skrá viðskiptavin
+ *
  */
 
 public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
@@ -26,7 +27,8 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
     /**
      * Lesa inn notendaviðmótið, setja reglu sem bindur gögn við viðmót og
      * nær gögnum úr dialognum
-     * @param v
+     * @param VidskiptavinurDialog er bundið við virkni
+     * @return "Í lagi"
      */
     public VidskiptavinurDialog(Vidskiptavinur v) {
         vidskiptavinur = v;
@@ -36,6 +38,7 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
         // sett regla um hvenær í lagi hnappur er virkur
         iLagiRegla();
     }
+
     public void BreytaStillingVidskiptavinur() {
         Optional<Vidskiptavinur> result = showAndWait();
         if (result.isPresent()) {
@@ -58,7 +61,7 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
 
     /**
      * Dialogsviðmót er lesið inn
-     * @return
+     * @return vidskiptavinur-view.fxml
      */
     private DialogPane lesaDialog() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vidskiptavinur-view.fxml"));

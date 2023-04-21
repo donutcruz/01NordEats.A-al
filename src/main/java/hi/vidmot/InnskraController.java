@@ -8,6 +8,13 @@ import vinnsla.Vidskiptavinur;
 
 import java.util.Optional;
 
+/**
+ * Skilgreinum klasa sem að sér um viðhald innskráningu
+ * @param tekur inn upplýsingar um viðskiptavin; nafn og lykilorð
+ * @param   breytan heldur um núverandi viðskiptavin=null eða búum til nýjan viðskiptavin
+ * @return viðskiptavinur eða nyrviðskiptavinur
+ */
+
 public class InnskraController {
 
     @FXML
