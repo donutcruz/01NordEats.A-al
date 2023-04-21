@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Duration;
 
+import java.text.BreakIterator;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -22,7 +23,9 @@ public class GreidslaController {
     private Button fxStadfestaPontun;
     @FXML
     private Button fxHaettaVid;
-
+    @FXML
+    private ChoiceBox<String> fxGreidslumataInfo;
+    private BreakIterator minnGreidslumata;
 
 
     /**
@@ -33,6 +36,13 @@ public class GreidslaController {
         fxVerd.textProperty().bind(pontunController.getKarfa().heildarVerdProperty().asString());
         fxVidskiptavinur.textProperty().bind(pontunController.getVidskiptavinur().nafnProperty());
         fxHeimilisfang.textProperty().bind(pontunController.getVidskiptavinur().heimilisfangProperty());
+
+        // Add choices to the choice box
+        fxGreidslumataInfo.getItems().addAll("Við afhendingu", "Kortagreiðsla", "Aur");
+    }
+    public void getGredslumata(ActionEvent event) {
+        String minnGreidslumataText = fxGreidslumataInfo.getValue();
+        minnGreidslumata.setText(minnGreidslumataText);
     }
 
     @FXML
@@ -61,7 +71,7 @@ public class GreidslaController {
                 alert.close();
                 finalTimeline.stop();
             } else {
-                alert.setContentText("Yibbí Pöntun staðfest !\n" + "Áætluð afhending NördEats: " + String.format("%02d:%02d", countdownSeconds.get() / 60, countdownSeconds.get() % 60));
+                alert.setContentText("Yibbí Pöntun staðfest !\n" + "Áætluð afhending NördEats: " + String.format("%02d:%02d", countdownSeconds.get() / 60, countdownSeconds.get() % 60) + "Mínutur");
             }
         }));
         timeline.setCycleCount(countdownSeconds.get());
