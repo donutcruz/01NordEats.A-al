@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
@@ -15,11 +16,11 @@ public class GreidslaController {
 
     public Label fxVidskiptavinur;
     public Label fxHeimilisfang;
-    public Label fxBidtimi;
     @FXML
     private Label fxVerd;
     @FXML
     private Button fxStadfestaPontun;
+
 
     /**
      * upphafsstilla reglur sem tengja senurnar
@@ -40,6 +41,14 @@ public class GreidslaController {
         alert.setHeaderText(null);
         alert.setContentText("Yibbí Pöntun staðfest !\n" + "Áætluð afhending NördEats: " + String.format("%02d:%02d", countdownSeconds.get() / 60, countdownSeconds.get() % 60));
         alert.show();
+
+        // Set custom styles for the alert window
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add(getClass().getResource("alert.css").toExternalForm());
+        dialogPane.getStyleClass().add("my-alert");
+
+        alert.show();
+
 
         Timeline timeline = null; // Initialize the timeline variable
         Timeline finalTimeline = timeline;

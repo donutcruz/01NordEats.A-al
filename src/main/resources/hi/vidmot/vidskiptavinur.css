@@ -4,8 +4,13 @@
     -fx-text-fill: #030303;
 }
 
-/* Styling for buttons */
-.button {
+/* Styling for the dialog pane */
+.dialog-pane {
+    -fx-background-color: #ffeeba;
+}
+
+/* Styling for the dialog buttons */
+.dialog-pane > .button-bar > .container > .button {
     -fx-background-color: #FFDE59;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
@@ -14,18 +19,18 @@
     -fx-background-radius: 5px;
 }
 
-.button:hover {
+.dialog-pane > .button-bar > .container > .button:hover {
     -fx-background-color: #030303;
     -fx-text-fill: #fff;
 }
 
-/* Styling for labels */
+/* Styling for the labels */
 .label {
     -fx-font-size: 16px;
     -fx-font-weight: bold;
 }
 
-/* Styling for text fields */
+/* Styling for the text fields */
 .text-field {
     -fx-font-size: 14px;
     -fx-padding: 5px;
@@ -39,16 +44,13 @@
     -fx-border-color: #3f51b5;
 }
 
-/* Styling for choice boxes */
-.choice-box {
-    -fx-font-size: 10px;
-    -fx-padding: 5px;
-    -fx-background-radius: 5px;
-    -fx-border-radius: 5px;
-    -fx-border-color: #ccc;
-    -fx-border-width: 1px;
+/* Styling for the HBox */
+.hbox {
+    -fx-spacing: 10px;
 }
 
-.choice-box:focused {
-    -fx-border-color: #3f51b5;
+/* Styling for the VBox */
+.vbox {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
 }

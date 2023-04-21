@@ -56,6 +56,13 @@ public class StillingarController {
         alert.setTitle("Stillingar vistaðar");
         alert.setHeaderText(null);
         alert.setContentText("Stillingar hafa verið vistaðar!");
+
+        // Set custom styles for the alert window
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add(getClass().getResource("alert.css").toExternalForm());
+        dialogPane.getStyleClass().add("my-alert");
         alert.showAndWait();
+
+        alert.show();
     }
 }
