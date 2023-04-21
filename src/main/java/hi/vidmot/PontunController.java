@@ -92,7 +92,7 @@ public class PontunController {
     public void fxInnskraningHandler(ActionEvent actionEvent) {
         // If a user is already logged in, display their name
         if (Vidskiptavinur.getCurrentUser() != null) {
-            fxInnskraning.setText("innskráð(ur) " + Vidskiptavinur.getCurrentUser().getNafn());
+            fxInnskraning.setText(Vidskiptavinur.getCurrentUser().getNafn());
         }
         // If no user is logged in, prompt for login credentials
         else {

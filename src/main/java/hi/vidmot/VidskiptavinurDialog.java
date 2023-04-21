@@ -18,11 +18,16 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
     @FXML
     private ButtonType fxILagi;
     @FXML
+    private ButtonType fxHaettaVid;
+    @FXML
     private TextField fxNafn;
     @FXML
     private TextField fxHeimilisfang;
-
-    private final Vidskiptavinur vidskiptavinur;
+    /**
+     * ViðskiptavinurDialog þegar verið er að búa til nýjan viðskiptavin.
+     **/
+     private final Vidskiptavinur vidskiptavinur;
+ 
 
     /**
      * Lesa inn notendaviðmótið, setja reglu sem bindur gögn við viðmót og
@@ -55,6 +60,8 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
                 .bind(fxNafn.textProperty().isEmpty()
                         .or(fxHeimilisfang.textProperty().isEmpty()));
     }
+    
+
 
     /**
      * Dialogsviðmót er lesið inn

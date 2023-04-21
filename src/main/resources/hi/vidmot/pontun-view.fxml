@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import hi.vidmot.MatsedillView?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -17,11 +18,11 @@
             <Label text="Tilboð" style="-fx-text-fill: white;"></Label>
             <MatsedillView fx:id="fxMatsedill" />
             <Label text="Pizzur" style="-fx-text-fill: white;"></Label>
-            <MatsedillView />
+            <MatsedillView fx:id="fxMatsedill01"/>
             <Label text="Meðlæti" style="-fx-text-fill: white;"></Label>
-            <MatsedillView />
+            <MatsedillView fx:id="fxMatsedill02"/>
             <Label text="Drykkir" style="-fx-text-fill: white;"></Label>
-            <MatsedillView />
+            <MatsedillView fx:id="fxMatsedill03"/>
          </VBox>
       </center>
       <top>

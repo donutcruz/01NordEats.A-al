@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class LoginDialog {
     private TextField usernameField;
-    private PasswordField passwordField;
+
 
     public TextInputDialog upphafsstilla() {
         TextInputDialog dialog = new TextInputDialog();
@@ -19,7 +19,6 @@ public class LoginDialog {
                 new ButtonType("Í lagi", ButtonBar.ButtonData.OK_DONE),
                 new ButtonType("Hætta við", ButtonBar.ButtonData.CANCEL_CLOSE));
         dialogPane.setContent(usernameField);
-        dialogPane.setContent(passwordField);
         dialog.setDialogPane(dialogPane);
 
         // Add event handler to cancel button to close the program
