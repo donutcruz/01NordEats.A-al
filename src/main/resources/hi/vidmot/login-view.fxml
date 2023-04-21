@@ -7,7 +7,7 @@
             fx:id="dialogPane"
             styleClass="dialog"
             prefWidth="400.0"
-            prefHeight="200.0">
+            prefHeight="200.0" stylesheets="@login-dialog.css">
     <header>
         <Label text="Innskráningar Gluggi" styleClass="dialog-header" />
     </header>

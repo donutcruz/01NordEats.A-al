@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.PontunController">
-   <ImageView fitHeight="542.0" fitWidth="736.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="563.0" fitWidth="736.0" pickOnBounds="true" preserveRatio="true">
       <Image url="@backgrunn.png" />
    </ImageView>
    <BorderPane layoutX="32.0" layoutY="113.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="405.0" prefWidth="669.0" stylesheets="@pontun.css">

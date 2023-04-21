@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="563.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.GreidslaController" stylesheets="@greida.css">
+<AnchorPane prefHeight="563.0" prefWidth="736.0" stylesheets="@greida.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.GreidslaController">
    <children>
       <ImageView fitHeight="582.0" fitWidth="776.0" layoutX="-17.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -56,6 +56,6 @@
 
       <Button layoutX="22.0" layoutY="479.0" mnemonicParsing="false" onAction="#pontunHandler" prefHeight="46.0" prefWidth="140.0" text="Til baka í pöntun" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="22.0" />
       <Button fx:id="fxStadfestaPontun" layoutX="22.0" layoutY="398.0" mnemonicParsing="false" onAction="#fxStadfestaPontunHandler" prefHeight="46.0" prefWidth="140.0" text="Staðfesta Pöntun" />
-      <ListView fx:id="fxKarfa" layoutX="262.0" layoutY="188.0" prefHeight="147.0" prefWidth="435.0" />
+      <ListView fx:id="fxGreidsluKarfa" layoutX="262.0" layoutY="188.0" prefHeight="147.0" prefWidth="435.0" />
    </children>
 </AnchorPane>
