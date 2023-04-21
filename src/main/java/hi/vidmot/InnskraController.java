@@ -1,5 +1,6 @@
 package hi.vidmot;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,6 +14,8 @@ public class InnskraController {
 
     @FXML
     private Button fxInnskra;
+    @FXML
+    private Button fxHaettavid;
 
     // Breyta sem heldur utan um núverandi viðskiptavin
     private Vidskiptavinur vidskiptavinur = null;
@@ -68,5 +71,10 @@ public class InnskraController {
     // Aðferð sem skilar núverandi viðskiptavini
     public Vidskiptavinur getVidskiptavinur() {
         return vidskiptavinur;
+    }
+
+    @FXML
+    private void fxHaettaVidHandler(ActionEvent event) {
+        Platform.exit();
     }
 }
