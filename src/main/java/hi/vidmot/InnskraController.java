@@ -8,6 +8,7 @@ import vinnsla.Vidskiptavinur;
 
 import java.util.Optional;
 
+@SuppressWarnings("ClassEscapesDefinedScope")
 public class InnskraController {
 
     @FXML

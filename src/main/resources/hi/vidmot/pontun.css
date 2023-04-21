@@ -85,3 +85,6 @@
 .list-view:focused {
     -fx-border-color: #3f51b5;
 }
+
+.AnchorPane {
+}

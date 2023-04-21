@@ -4,18 +4,17 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.DialogPane;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.util.Duration;
 
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class GreidslaController {
 
     public Label fxVidskiptavinur;
     public Label fxHeimilisfang;
+    public ListView fxGreidsluKarfa;
     @FXML
     private Label fxVerd;
     @FXML
@@ -44,23 +43,23 @@ public class GreidslaController {
 
         // Set custom styles for the alert window
         DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add(getClass().getResource("alert.css").toExternalForm());
+        dialogPane.getStylesheets().add(Objects.requireNonNull(getClass().getResource("alert.css")).toExternalForm());
         dialogPane.getStyleClass().add("my-alert");
 
         alert.show();
 
 
-        Timeline timeline = null; // Initialize the timeline variable
-        Timeline finalTimeline = timeline;
-        timeline = new Timeline(new KeyFrame(Duration.seconds(1), evt -> {
-            int i = countdownSeconds.getAndDecrement();
+        Timeline finalTimeline = null;
+        // Initialize the timeline variable
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), evt -> {
+            countdownSeconds.getAndDecrement();
             if (countdownSeconds.get() == 0) {
                 alert.close();
                 finalTimeline.stop();
             } else {
                 alert.setContentText("Yibbí Pöntun staðfest !\n" + "Áætluð afhending NördEats: " + String.format("%02d:%02d", countdownSeconds.get() / 60, countdownSeconds.get() % 60));
             }
-        }, new javafx.animation.KeyValue[]{}));
+        }));
         timeline.setCycleCount(countdownSeconds.get());
         timeline.play();
     }
@@ -68,9 +67,8 @@ public class GreidslaController {
     /**
      * Handler fyrir að fara aftur í pöntunarsenu
      *
-     * @param actionEvent
      */
-    public void pontunHandler(ActionEvent actionEvent) {
+    public void pontunHandler(ActionEvent ignoredActionEvent) {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         pontunController.taemaKorfu();
         ViewSwitcher.switchTo(View.PONTUN);

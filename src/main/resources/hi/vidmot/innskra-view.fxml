@@ -6,16 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="523.0" prefWidth="705.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.InnskraController" stylesheets="@innskra.css">
-   <children>
-      <ImageView fitHeight="563.0" fitWidth="736.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@innskra.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="fxInnskra" layoutX="253.0" layoutY="321.0" mnemonicParsing="false" onAction="#fxInnskraHandler" prefHeight="26.0" prefWidth="231.0" text=" Innskrá">
-         <font>
-            <Font name="Verdana Bold" size="12.0" />
-         </font></Button>
-   </children>
+<AnchorPane prefHeight="523.0" prefWidth="705.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.InnskraController" stylesheets="@innskra.css">
+   <ImageView fitHeight="563.0" fitWidth="736.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@innskra.png"/>
+   </ImageView>
+   <Button fx:id="fxInnskra" layoutX="253.0" layoutY="321.0" mnemonicParsing="false" onAction="#fxInnskraHandler"
+           prefHeight="26.0" prefWidth="231.0" text=" Innskrá">
+      <font>
+         <Font name="Verdana Bold" size="12.0"/>
+      </font>
+   </Button>
 </AnchorPane>

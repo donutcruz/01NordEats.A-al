@@ -12,6 +12,7 @@ import java.util.Optional;
  * Dialogur til að skrá viðskiptavin
  */
 
+@SuppressWarnings("ClassEscapesDefinedScope")
 public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
 
     @FXML
@@ -26,7 +27,6 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
     /**
      * Lesa inn notendaviðmótið, setja reglu sem bindur gögn við viðmót og
      * nær gögnum úr dialognum
-     * @param v
      */
     public VidskiptavinurDialog(Vidskiptavinur v) {
         vidskiptavinur = v;
@@ -58,7 +58,7 @@ public class VidskiptavinurDialog extends Dialog<Vidskiptavinur> {
 
     /**
      * Dialogsviðmót er lesið inn
-     * @return
+     * @return Vidskiptavinur upplýsingar
      */
     private DialogPane lesaDialog() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vidskiptavinur-view.fxml"));
