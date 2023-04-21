@@ -1,5 +1,6 @@
 package hi.vidmot;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -19,6 +20,8 @@ import java.util.Optional;
  * Controller fyrir pöntunarsenuna
  */
 public class PontunController {
+    @FXML
+    private Button fxHaettaVid;
 
     public Button fxStillingar;
     @FXML
@@ -132,5 +135,9 @@ public class PontunController {
         ViewSwitcher.switchTo(View.STILLINGAR);
         // náum í rótina af Stillingar senunni frá cache
         Parent stillingarRoot = ViewSwitcher.lookupRoot(View.STILLINGAR);
+    }
+
+    public void HaettaVidHandler(ActionEvent event) {
+        Platform.exit();
     }
 }

@@ -2,6 +2,7 @@ package hi.vidmot;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -19,6 +20,9 @@ public class GreidslaController {
     private Label fxVerd;
     @FXML
     private Button fxStadfestaPontun;
+    @FXML
+    private Button fxHaettaVid;
+
 
 
     /**
@@ -72,5 +76,9 @@ public class GreidslaController {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         pontunController.taemaKorfu();
         ViewSwitcher.switchTo(View.PONTUN);
+    }
+
+    public void HaettaVidHandler(ActionEvent event) {
+        Platform.exit();
     }
 }
