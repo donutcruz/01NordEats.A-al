@@ -12,6 +12,12 @@ import java.text.BreakIterator;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ *
+ * Skilgreinum klasa sem sér um Greiðsluna
+ * Upphafsstillum reglur sem tengja senurnar
+ */
+
 public class GreidslaController {
 
     public Label fxVidskiptavinur;
@@ -28,16 +34,14 @@ public class GreidslaController {
     private BreakIterator minnGreidslumata;
 
 
-    /**
-     * upphafsstilla reglur sem tengja senurnar
-     */
+
     public void initialize() {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
         fxVerd.textProperty().bind(pontunController.getKarfa().heildarVerdProperty().asString());
         fxVidskiptavinur.textProperty().bind(pontunController.getVidskiptavinur().nafnProperty());
         fxHeimilisfang.textProperty().bind(pontunController.getVidskiptavinur().heimilisfangProperty());
 
-        // Add choices to the choice box
+        //Bætum við valkostum í valkostaboxið
         fxGreidslumataInfo.getItems().addAll("Við afhendingu", "Kortagreiðsla", "Aur");
     }
     public void getGredslumata(ActionEvent event) {
@@ -45,17 +49,24 @@ public class GreidslaController {
         minnGreidslumata.setText(minnGreidslumataText);
     }
 
+    /**
+     *
+     * @param event þegar að notandi hefur staðfest pöntun byrjar timerinn
+     * @return afhendingartími pöntunarinnar
+     */
+
     @FXML
     private void fxStadfestaPontunHandler(ActionEvent event) {
-        AtomicInteger countdownSeconds = new AtomicInteger(15 * 60); // 15 minutes in seconds
+        AtomicInteger countdownSeconds = new AtomicInteger(15 * 60); // 15 mínútur í sekúndur
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION); //Stillum viðvöruskilaboðin eftir að Pöntun sé staðfest
         alert.setTitle("Pöntun Staðfest");
         alert.setHeaderText(null);
         alert.setContentText("Yibbí Pöntun staðfest !\n" + "Áætluð afhending NördEats: " + String.format("%02d:%02d", countdownSeconds.get() / 60, countdownSeconds.get() % 60));
         alert.show();
 
-        // Set custom styles for the alert window
+
+        // Setjum custom styles fyrir tilkynninga gluggan 
         DialogPane dialogPane = alert.getDialogPane();
         dialogPane.getStylesheets().add(Objects.requireNonNull(getClass().getResource("alert.css")).toExternalForm());
         dialogPane.getStyleClass().add("my-alert");
@@ -64,7 +75,7 @@ public class GreidslaController {
 
 
         Timeline finalTimeline = null;
-        // Initialize the timeline variable
+        // Frumstillum tímalínu breytuna
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), evt -> {
             countdownSeconds.getAndDecrement();
             if (countdownSeconds.get() == 0) {
@@ -81,6 +92,8 @@ public class GreidslaController {
     /**
      * Handler fyrir að fara aftur í pöntunarsenu
      *
+     * @param actionEvent
+     *
      */
     public void pontunHandler(ActionEvent ignoredActionEvent) {
         PontunController pontunController = (PontunController) ViewSwitcher.lookup(View.PONTUN);
@@ -88,7 +101,9 @@ public class GreidslaController {
         ViewSwitcher.switchTo(View.PONTUN);
     }
 
+
     public void HaettaVidHandler(ActionEvent event) {
         Platform.exit();
     }
 }
+

@@ -39,6 +39,11 @@ public class PontunController {
     private Vidskiptavinur vidskiptavinur = null;
     private DefaultTreeModel scene;
 
+    /**
+     * Tengir saman viðmót og vinnslu
+     * @throws IOException
+     */
+
     public void initialize() throws IOException {
         fxKarfa.setItems(karfa.getVeitingar()); // tengja viðmót og vinnslu
         fxSamtals.textProperty().bind(karfa.heildarVerdProperty().asString()); // bindum saman körfu
@@ -116,9 +121,15 @@ public class PontunController {
         v.ifPresent(value -> fxInnskraning.setText(value.getNafn()));
     }
 
+    /**
+     * Notandi setur í körfuna og vistar vöruval
+     * @return
+     */
+
     public Karfa getKarfa() {
         return karfa;
     }
+
 
     public Vidskiptavinur getVidskiptavinur() {
         return vidskiptavinur;
@@ -127,6 +138,7 @@ public class PontunController {
     public void taemaKorfu() {
         fxKarfa.getItems().removeAll(fxKarfa.getItems());
     }
+
 
     public void fxStillingarHandler(ActionEvent actionEvent) {
         System.out.println("Stillingar button clicked");
